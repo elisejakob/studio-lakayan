@@ -12,8 +12,7 @@ import category from './documents/category'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
-import bioPortableText from './objects/bioPortableText'
-import excerptPortableText from './objects/excerptPortableText'
+import simplePortableText from './objects/simplePortableText'
 import mainImage from './objects/mainImage'
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -31,8 +30,7 @@ export default createSchema({
     about,
     mainImage,
     bodyPortableText,
-    bioPortableText,
-    excerptPortableText
+    simplePortableText
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas

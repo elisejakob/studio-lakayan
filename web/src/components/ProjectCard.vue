@@ -55,6 +55,10 @@ export default {
     min-width: 100%;
   }
 
+  &__content {
+    margin-left: -1rem;
+  }
+
   &__title {
     margin-top: 0;
   }

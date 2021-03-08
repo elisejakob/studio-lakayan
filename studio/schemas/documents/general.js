@@ -9,6 +9,12 @@ export default {
       title: 'Title'
     },
     {
+      name: 'intro',
+      type: 'simplePortableText',
+      title: 'Intro',
+      description: 'The introduction to Studio Lakayan. The first things visitors see when they visit the front page.'
+    },
+    {
       name: 'description',
       type: 'text',
       title: 'Description',

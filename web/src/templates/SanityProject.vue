@@ -6,7 +6,7 @@
       <project-meta :project="$page.project" v-if="$page.project" />
     </div>
 
-    <div class="project content-box">
+    <div class="project">
       <div class="project__header">
         <img
           alt="Cover image"
@@ -91,17 +91,14 @@ query project ($id: ID!) {
 <style lang="scss">
 .project-title {
   padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
-  text-align: center;
 }
 
 .project {
+  padding-bottom: var(--space);
   &__header {
     width: calc(100% + var(--space) * 2);
     margin-left: calc(var(--space) * -1);
-    margin-top: calc(var(--space) * -1);
     margin-bottom: calc(var(--space) / 2);
-    overflow: hidden;
-    border-radius: var(--radius) var(--radius) 0 0;
 
     img {
       width: 100%;

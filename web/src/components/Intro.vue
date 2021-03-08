@@ -1,29 +1,29 @@
 <template>
-  <section class="intro">
-    <p>{{ $static.general.description}}</p>
+  <section class="intro lead">
+    <block-content :blocks="$static.general._rawIntro" />
   </section>
 </template>
 
 <static-query>
 query {
   general: sanityGeneral (id: "general") {
-    description
+    _rawIntro
   }
 }
 </static-query>
 
-<style lang="scss">
-.logo {
-  text-decoration: none;
-  color: var(--body-color) !important;
-  font-size: 0.9em;
+<script>
+import BlockContent from '~/components/BlockContent'
 
-  &__image {
-    vertical-align: middle;
-    border-radius: 99px;
-    height: 40px;
-    width: 40px;
-    margin-right: 0.5em;
+export default {
+  components: {
+    BlockContent
   }
+}
+</script>
+
+<style lang="scss">
+.intro {
+  margin: 2rem 10% 4rem 0;
 }
 </style>
