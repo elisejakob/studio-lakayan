@@ -1,59 +1,45 @@
 <template>
   <Layout>
-    <div class="post-title">
-      <h1 class="post-title__text">{{ $page.post.title }}</h1>
+    <div class="project-title">
+      <h1 class="project-title__text">{{ $page.project.title }}</h1>
 
-      <post-meta :post="$page.post" v-if="$page.post" />
+      <project-meta :project="$page.project" v-if="$page.project" />
     </div>
 
-    <div class="post content-box">
-      <div class="post__header">
+    <div class="project content-box">
+      <div class="project__header">
         <img
           alt="Cover image"
-          v-if="$page.post.mainImage"
-          :src="$urlForImage($page.post.mainImage, $page.metadata.sanityOptions).width(600).auto('format').url()"
+          v-if="$page.project.mainImage"
+          :src="$urlForImage($page.project.mainImage, $page.metadata.sanityOptions).width(600).auto('format').url()"
         />
       </div>
 
       <block-content
-        class="post__content"
-        :blocks="$page.post._rawBody"
-        v-if="$page.post._rawBody"
+        class="project__content"
+        :blocks="$page.project._rawBody"
+        v-if="$page.project._rawBody"
       />
-
-      <div class="post__footer">
-        <post-tags :post="$page.post" v-if="$page.post" />
-      </div>
     </div>
-
-    <div class="post-comments">
-      <!-- Add comment widgets here -->
-    </div>
-
-    <author-card class="post-author" />
   </Layout>
 </template>
 
 <script>
 import BlockContent from '~/components/BlockContent'
-import PostMeta from '~/components/PostMeta'
-import PostTags from '~/components/PostTags'
-import AuthorCard from '~/components/AuthorCard'
+import ProjectMeta from '~/components/ProjectMeta'
 
 export default {
   components: {
-    AuthorCard,
-    PostMeta,
-    PostTags,
+    ProjectMeta,
     BlockContent
   },
   metaInfo() {
     return {
-      title: this.$page.post.title,
+      title: this.$page.project.title,
       meta: [
         {
           name: 'description',
-          content: this.$page.post.description
+          content: this.$page.project.description
         }
       ]
     }
@@ -62,14 +48,14 @@ export default {
 </script>
 
 <page-query>
-query Post ($id: ID!) {
+query project ($id: ID!) {
   metadata {
     sanityOptions {
       projectId
       dataset
     }
   }
-  post: sanityPost (id: $id) {
+  project: sanityProject (id: $id) {
     title
     publishedAt (format: "D. MMMM YYYY")
     categories {
@@ -103,12 +89,12 @@ query Post ($id: ID!) {
 </page-query>
 
 <style lang="scss">
-.post-title {
+.project-title {
   padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
   text-align: center;
 }
 
-.post {
+.project {
   &__header {
     width: calc(100% + var(--space) * 2);
     margin-left: calc(var(--space) * -1);
@@ -143,17 +129,5 @@ query Post ($id: ID!) {
       max-width: none;
     }
   }
-}
-
-.post-comments {
-  padding: calc(var(--space) / 2);
-
-  &:empty {
-    display: none;
-  }
-}
-
-.post-author {
-  margin-top: calc(var(--space) / 2);
 }
 </style>

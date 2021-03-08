@@ -1,12 +1,12 @@
 export default {
   widgets: [
-    {
-      name: 'sanity-tutorials',
-      options: {
-        templateRepoId: 'sanity-io/sanity-template-gridsome-blog'
-      }
-    },
     {name: 'structure-menu'},
+    {
+      name: 'document-list',
+      options: {title: 'Recent projects', order: '_createdAt desc', types: ['project']},
+      layout: {width: 'medium'}
+    },
+    {name: 'project-users', layout: {height: 'auto'}},
     {
       name: 'project-info',
       options: {
@@ -42,12 +42,6 @@ export default {
           {title: 'Frontend', value: 'https://studio-lakayan.netlify.app', category: 'apps'}
         ]
       }
-    },
-    {name: 'project-users', layout: {height: 'auto'}},
-    {
-      name: 'document-list',
-      options: {title: 'Recent blog posts', order: '_createdAt desc', types: ['post']},
-      layout: {width: 'medium'}
     }
   ]
 }

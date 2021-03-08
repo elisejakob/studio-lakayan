@@ -1,7 +1,7 @@
 export default {
-  name: 'category',
+  name: 'general',
   type: 'document',
-  title: 'Category',
+  title: 'General',
   fields: [
     {
       name: 'title',
@@ -11,7 +11,8 @@ export default {
     {
       name: 'description',
       type: 'text',
-      title: 'Description'
+      title: 'Description',
+      description: 'Describe your site for search engines and social media.'
     }
   ]
 }
