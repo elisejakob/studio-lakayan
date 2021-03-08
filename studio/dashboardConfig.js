@@ -20,7 +20,7 @@ export default {
                 {
                   buildHookId: '6046435fc21ff309e265bd3b',
                   title: 'Sanity Studio',
-                  name: 'studio-lakayan-studio',
+                  name: 'studio-lakayan-admin',
                   apiId: '8b4542d3-c297-409d-9b45-8eefc524f932'
                 },
                 {
