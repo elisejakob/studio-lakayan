@@ -8,6 +8,8 @@
         :project="edge.node"
         :metadata="$page.metadata"
       />
+      <info-card />
+      <about-card />
     </div>
   </Layout>
 </template>
@@ -64,11 +66,15 @@
 <script>
 import Intro from '~/components/Intro'
 import ProjectCard from '~/components/ProjectCard'
+import InfoCard from '~/components/InfoCard'
+import AboutCard from '~/components/AboutCard'
 
 export default {
   components: {
     Intro,
-    ProjectCard
+    ProjectCard,
+    InfoCard,
+    AboutCard
   },
   metaInfo: {
     title: 'Studio Lakayan'

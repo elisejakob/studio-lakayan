@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <header class="header">
+    <header class="site-header">
       <div class="header__left">
-        <header-logo v-if="showLogo" />
+        <!--<header-logo v-if="showLogo" />-->
+        <Logo />
       </div>
 
       <div class="header__right">
@@ -15,18 +16,33 @@
     </main>
 
     <footer class="footer">
-      <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}.</span>
-      <span class="footer__links">
-        Powered by
-        <a href="//gridsome.org">Gridsome</a> &amp;
-        <a href="//www.sanity.io">Sanity.io</a>
-      </span>
+      <div class="contact">
+        <h2>Contact</h2>
+        <ul>
+          <li>Email: <strong>studio@lakayan.no</strong></li>
+          <li>Phone: <strong>+47 459 19 489</strong></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h2>Social</h2>
+        <ul>
+          <li>Instagram: <strong>@studiolakayan</strong></li>
+          <li>Facebook: <strong>@studiolakayan</strong></li>
+          <li>LinkedIn: <strong>@studiolakayan</strong></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h2>Contact</h2>
+        <ul>
+          <li>Email: <strong>studio@lakayan.no</strong></li>
+        </ul>
+      </div>
     </footer>
   </div>
 </template>
 
 <script>
-import HeaderLogo from '~/components/HeaderLogo'
+import Logo from '~/components/Logo'
 import ToggleTheme from '~/components/ToggleTheme'
 
 export default {
@@ -37,19 +53,18 @@ export default {
     }
   },
   components: {
-    HeaderLogo,
+    Logo,
     ToggleTheme
   }
 }
 </script>
 
 <style lang="scss">
-.header {
+.site-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  min-height: var(--header-height);
-  padding: 0 calc(var(--space) / 2);
+  align-items: top;
+  padding: 1.4rem;
   top: 0;
   z-index: 10;
 
@@ -72,20 +87,22 @@ export default {
 }
 
 .footer {
-  border-top: 1px solid rgba(0, 0, 0, .2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: calc(var(--space) / 2);
   text-align: center;
   font-size: 0.8em;
-
-  > span {
-    margin: 0 0.35em;
-  }
+  padding: 2rem 2rem 14rem;
+  background: var(--body-color);
+  color: var(--bg-color);
 
   a {
-    color: currentColor;
+    color: inherit;
+  }
+
+  h2 {
+    margin-top: 0;
+    text-align: left;
   }
 }
 </style>

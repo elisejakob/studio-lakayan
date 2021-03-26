@@ -12,20 +12,16 @@
       <h2 class="project-card__title" v-html="project.title" />
       <block-content :blocks="project._rawExcerpt" />
 
-      <project-meta class="project-card__meta" :project="project" />
-
       <g-link class="project-card__link" :to="project.slug.current">Link</g-link>
     </div>
   </div>
 </template>
 
 <script>
-import ProjectMeta from '~/components/ProjectMeta'
 import BlockContent from '~/components/BlockContent'
 
 export default {
   components: {
-    ProjectMeta,
     BlockContent
   },
   props: {
@@ -36,7 +32,10 @@ export default {
 
 <style lang="scss">
 .project-card {
-  margin-bottom: var(--space);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 -1rem;
+  align-items: stretch;
   position: relative;
 
   &__header {
@@ -53,14 +52,13 @@ export default {
 
   &__image {
     min-width: 100%;
+    min-height: 100%;
+    display: block;
   }
 
   &__content {
-    margin-left: -1rem;
-  }
-
-  &__title {
-    margin-top: 0;
+    padding: 2rem;
+    background: var(--bg-content-color);
   }
 
   &__link {

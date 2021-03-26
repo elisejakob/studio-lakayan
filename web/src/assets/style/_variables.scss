@@ -3,19 +3,25 @@ html {
 	--base-font-size: 20px;
 }
 
+:root {
+	--color-light: #F4ECDD;
+	--color-darkearth: #352A2A;
+	--color-darknight: #2E1639;
+	--color-olive: #AEAD83;
+	--color-green: #4D6757;
+	--color-darkgreen: #111b10;
+
+	--color-red: #F80934;
+	--color-darkred: #993239;
+}
+
 // Light default theme
 body {
- 	--bg-color: #f1e3cd;
- 	--bg-content-color: rgb(255, 255, 255);
- 	--bg-code: #fffbf3;
- 	--body-color: rgb(49, 43, 35);
- 	--title-color: rgb(26, 23, 23);
- 	--link-color: #e61755;
+ 	--bg-color: var(--color-light);
+ 	--bg-content-color: white;
+ 	--body-color: var(--color-darkearth);
+ 	--link-color: var(--color-red);
  	--border-color:  rgba(0,0,0,.1);;
-  --space: 3.5rem;
-  --content-width: 860px;
-  --header-height: 80px;
-  --radius: 5px;
 }
 
 // Make  things smaller for mobile
@@ -32,11 +38,9 @@ body {
 
 // Override variables for Dark theme
 body[data-theme="dark"] {
- 	--bg-color: #0a3029;
- 	--bg-content-color: #0f4440;
- 	--bg-code: rgba(0,0,0,.3);
+ 	--bg-color: var(--color-darkgreen);
+ 	--bg-content-color: black;
  	--border-color:  rgba(255,255,255,.1);;
- 	--body-color: #ced8de;
- 	--title-color: #fff;
- 	--link-color: #af9cef;
+ 	--body-color: var(--color-light);
+ 	--link-color: var(--color-red);
 }

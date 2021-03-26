@@ -5,13 +5,13 @@ html {
 }
 
 body {
-  font-family: 'hero-new', sans-serif;
+  font-family: 'inter', sans-serif;
   font-weight: 400;
   line-height: 1.45;
 }
 
 p {
-	margin-bottom: 1.25em;
+	margin-bottom: 1.4rem;
 }
 
 .lead {
@@ -27,7 +27,6 @@ p {
 
 h1, h2, h3, h4, h5 {
   transition: color .6s;
-  color: var(--title-color);
   margin: 2.75rem 0 1rem;
   font-family: 'ivypresto-headline', serif;
   font-weight: 200;
@@ -58,7 +57,6 @@ strong {
 blockquote {
   border-left: 4px solid var(--border-color);
   padding-left: calc(var(--space) / 2);
-  color: var(--title-color);
 }
 
 em {
