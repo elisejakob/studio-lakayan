@@ -1,13 +1,13 @@
 <template>
-  <footer class="site-footer">
-    <div class="contact">
+  <footer class="site-footer" id="contact">
+    <div class="block contact">
       <h2>Contact</h2>
       <ul>
         <li><a href="mailto:studio@lakayan.no" target="_blank"><div class="before"><Arrow /></div>studio@lakayan.no</a></li>
         <li><a href="tel:004745919489" target="_blank"><div class="before"><Arrow /></div>+47 459 19 489</a></li>
       </ul>
     </div>
-    <div class="contact">
+    <div class="block social">
       <h2>Social</h2>
       <ul>
         <li><a href="https://instagram.com/studiolakayan" target="_blank"><div class="before"><Arrow /></div>Instagram</a></li>
@@ -15,7 +15,7 @@
         <li><a href="https://linkedin.com/studiolakayan" target="_blank"><div class="before"><Arrow /></div>LinkedIn</a></li>
       </ul>
     </div>
-    <div class="contact">
+    <div class="block text">
       <p class="lead">This is a new studio! We don't have any projects! See Dorna's previous projects at dorna.no</p>
     </div>
     <div class="top-link">
@@ -41,11 +41,12 @@ export default {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-gap: 4rem;
-  padding: calc(var(--space) / 2);
+  padding: 2rem;
   font-size: 0.8em;
-  padding: 7rem 2rem 2rem;
+  padding: 14rem 2rem 2rem;
+  min-height: 100vh;
 
-  .contact {
+  .block {
     grid-column: span 2;
   }
 
@@ -102,6 +103,27 @@ export default {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+  }
+}
+@media (max-width: 1000px) {
+  .site-footer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    .block {
+      grid-column: span 2;
+    }
+    .text {
+      grid-column: 1 / span 3;
+      margin: 4rem 0 14rem;
+    }
+    ul {
+      margin-bottom: 4rem;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .site-footer {
+    display: block;
   }
 }
 </style>

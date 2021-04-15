@@ -1,7 +1,7 @@
 <template>
   <section class="intro">
     <div class="lead"><block-content :blocks="$static.general._rawIntro" /></div>
-    <button class="button">Get in touch</button>
+    <a href="#contact" class="button">Get in touch</a>
   </section>
 </template>
 
@@ -48,7 +48,10 @@ export default {
   background: var(--body-color);
   color: var(--bg-color);
   font-family: inherit;
-  font-size: 1.2rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 200;
   border: none;
   padding: 1rem 2rem;
   margin: 0 auto;
@@ -58,6 +61,14 @@ export default {
   cursor: pointer;
   &:hover {
     background: var(--link-color);
+  }
+}
+@media (max-width: 1000px) {
+  .intro {
+    margin-top: 4rem;
+  }
+  .lead p {
+    font-size: 2.4rem;
   }
 }
 </style>

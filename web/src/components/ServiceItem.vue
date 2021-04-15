@@ -45,7 +45,7 @@ export default {
   padding-left: 2rem;
   font-family: var(--font-sans);
   font-size: 1.4rem;
-  font-weight: 300;
+  font-weight: 200;
   position: relative;
   opacity: 0;
   transform: translateX(-50px);

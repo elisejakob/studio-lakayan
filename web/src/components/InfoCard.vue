@@ -98,4 +98,14 @@ export default {
     }
   }
 }
+@media (max-width: 1000px) {
+  .info-card {
+    padding: 2rem 0;
+  }
+}
+@media (max-width: 700px) {
+  .info-card {
+    display: block;
+  }
+}
 </style>

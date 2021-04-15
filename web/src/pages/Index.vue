@@ -155,4 +155,12 @@ body[data-theme="dark"] {
     opacity: 0;
   }
 }
+@media (max-width: 1000px) {
+  .intro-image-wrapper {
+    display: block;
+    width: calc(100% + 3.4rem);
+    max-width: none;
+    margin: -7rem -2rem 0;
+  }
+}
 </style>

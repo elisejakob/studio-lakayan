@@ -46,4 +46,9 @@ export default {
     opacity: 1;
   }
 }
+@media (max-width: 1000px) {
+  .site-main {
+    padding: 1.5vw 1.4rem 0;
+  }
+}
 </style>

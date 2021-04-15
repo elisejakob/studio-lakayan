@@ -112,4 +112,26 @@ export default {
     }
   }
 }
+@media (max-width: 1000px) {
+  .about-card {
+    grid-template-columns: 1fr;
+    &__image {
+      margin-bottom: 2rem;
+    }
+    &__header {
+      display: block;
+      h2, p {
+        margin-bottom: 4rem;
+      }
+    }
+    &__content {
+      grid-column: span 1;
+      padding-top: 0;
+
+      p {
+        margin-left: 0;
+      }
+    }
+  }
+}
 </style>

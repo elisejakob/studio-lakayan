@@ -22,10 +22,5 @@ svg {
     fill: var(--body-color);
     transition: all .3s ease-in-out;
   }
-  &:hover {
-    path {
-      fill: var(--link-color);
-    }
-  }
 }
 </style>
