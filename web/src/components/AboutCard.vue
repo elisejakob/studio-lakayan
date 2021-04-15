@@ -8,8 +8,13 @@
         :src="$urlForImage($static.about.image, $static.metadata.sanityOptions).height(800).width(800).auto('format').url()"
       />
     </div>
-    <div class="about-card__content">
+    <div class="about-card__header">
       <h2 class="about-card__title">About Dorna</h2>
+      <p class="lead"><!--{{ $static.about.lead }}-->
+        Dorna Lakayan is an interior architect and designer with a refined and holistic approach to architecture, interiors and product design that combines her Persian heritage, with modern and minimal Scandinavian design language.
+      </p>
+    </div>
+    <div class="about-card__content">
       <block-content :blocks="$static.about._rawBio" />
     </div>
   </div>
@@ -67,26 +72,44 @@ export default {
   align-items: stretch;
   position: relative;
   min-height: 50vh;
+  padding: 2rem;
 
   &__header {
-    margin-left: calc(var(--space) * -1);
-    margin-right: calc(var(--space) * -1);
-    margin-bottom: calc(var(--space) / 2);
-    margin-top: calc(var(--space) * -1);
-    overflow: hidden;
-
-    &:empty {
-      display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 4rem;
+    h2, p {
+      margin: 0;
+    }
+    h2 {
+      font-style: normal;
     }
   }
-
   &__content {
-    padding: 2rem;
-    background: var(--color-light);
-    color: var(--color-red);
+    grid-column: 1 / span 2;
+    padding-top: 7rem;
+    
+    p {
+      max-width: 28em;
+      margin: 0 auto 1rem;
+    }
   }
   img {
     display: block;
+  }
+}
+@media (min-width: 1000px) {
+  .about-card {
+    &__image {
+      order: 2;
+    }
+    &__header {
+      order: 1;
+    }
+    &__content {
+      order: 3;
+    }
   }
 }
 </style>

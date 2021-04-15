@@ -1,0 +1,69 @@
+<template>
+  <div class="to-top" @click="toTop()">
+    <IntersectionObserver
+      id="totop"
+      @on-enter-viewport="onEnterViewport"
+    ></IntersectionObserver>
+    <div class="arrow" :class="{ inview: isInView}">
+      <svg viewBox="0 0 90 355" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M35.6507 -2.33073e-06L0 88.2416L8.93821 91.8528L44.5889 3.61114L35.6507 -2.33073e-06Z" fill="black"/>
+      <path d="M53.5297 0.0122904L44.5916 3.62343L80.2422 91.8651L89.1804 88.2539L53.5297 0.0122904Z" fill="black"/>
+      <path d="M35.6556 131.281L0.00488281 219.522L8.9431 223.134L44.5938 134.892L35.6556 131.281Z" fill="black"/>
+      <path d="M53.5297 131.295L44.5916 134.906L80.2422 223.147L89.1804 219.536L53.5297 131.295Z" fill="black"/>
+      <path d="M35.657 262.546L0.00634766 350.788L8.94457 354.399L44.5952 266.157L35.657 262.546Z" fill="black"/>
+      <path d="M53.5262 262.567L44.588 266.178L80.2387 354.42L89.1769 350.808L53.5262 262.567Z" fill="black"/>
+      </svg>
+    </div>
+  </div>
+</template>
+
+<script>
+import IntersectionObserver from '~/components/tools/IntersectionObserver'
+
+export default {
+  components: {
+    IntersectionObserver
+  },
+  data() {
+    return {
+      isInView: false,
+    }
+  },
+  methods: {
+    onEnterViewport(value) {
+      this.isInView = value;
+    },
+    toTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.to-top {
+  svg {
+    height: 6rem;
+    path {
+      fill: var(--body-color);
+      transition: all .3s ease-in-out;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    svg path {
+      fill: var(--link-color);
+    }
+  }
+}
+.arrow {
+  opacity: 0;
+  transition: all .8s ease-in-out;
+  &.inview {
+    opacity: 1;
+  }
+}
+</style>

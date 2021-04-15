@@ -1,8 +1,7 @@
 <template>
   <section class="intro">
-    <div class="test">Art — Design – Architecture</div>
     <div class="lead"><block-content :blocks="$static.general._rawIntro" /></div>
-    <button>Get in touch</button>
+    <button class="button">Get in touch</button>
   </section>
 </template>
 
@@ -24,30 +23,41 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .intro {
-  margin: 2rem 0 4rem;
-}
-.test {
-  font-size: .8rem;
-  text-transform: uppercase;
-  width: 100%;
-  text-align: center;
-  color: var(--color-green);
+  margin: 1rem 0 4rem;
+  position: relative;
+  z-index: 10;
 }
 .lead {
+  font-family: var(--font-serif);
+  font-weight: 200;
+  line-height: 1.1;
   font-size: 3.2rem;
   text-align: center;
-  max-width: 16em;
-  margin: 2rem auto 3rem;
+  max-width: 18em;
+  width: 80%;
+  margin: 1rem auto 4rem;
+
+  p {
+    font-size: 3.2rem;
+  }
 }
-button {
+.button {
   display: block;
   background: var(--body-color);
   color: var(--bg-color);
   font-family: inherit;
+  font-size: 1.2rem;
   border: none;
   padding: 1rem 2rem;
   margin: 0 auto;
+  width: 80%;
+  max-width: 400px;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background: var(--link-color);
+  }
 }
 </style>

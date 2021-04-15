@@ -1,49 +1,19 @@
 <template>
   <div id="app">
-    <header class="site-header">
-      <div class="header__left">
-        <!--<header-logo v-if="showLogo" />-->
-        <Logo />
-      </div>
+    <Header />
 
-      <div class="header__right">
-        <toggle-theme />
-      </div>
-    </header>
-
-    <main class="main">
+    <main class="site-main">
       <slot />
     </main>
 
-    <footer class="footer">
-      <div class="contact">
-        <h2>Contact</h2>
-        <ul>
-          <li>Email: <strong>studio@lakayan.no</strong></li>
-          <li>Phone: <strong>+47 459 19 489</strong></li>
-        </ul>
-      </div>
-      <div class="contact">
-        <h2>Social</h2>
-        <ul>
-          <li>Instagram: <strong>@studiolakayan</strong></li>
-          <li>Facebook: <strong>@studiolakayan</strong></li>
-          <li>LinkedIn: <strong>@studiolakayan</strong></li>
-        </ul>
-      </div>
-      <div class="contact">
-        <h2>Contact</h2>
-        <ul>
-          <li>Email: <strong>studio@lakayan.no</strong></li>
-        </ul>
-      </div>
-    </footer>
+    <Footer />
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo'
+import Header from '~/components/Header'
 import ToggleTheme from '~/components/ToggleTheme'
+import Footer from '~/components/Footer'
 
 export default {
   props: {
@@ -53,56 +23,27 @@ export default {
     }
   },
   components: {
-    Logo,
-    ToggleTheme
+    Header,
+    ToggleTheme,
+    Footer
   }
 }
 </script>
 
 <style lang="scss">
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: top;
-  padding: 1.4rem;
-  top: 0;
-  z-index: 10;
-
-  &__left,
-  &__right {
-    display: flex;
-    align-items: center;
-  }
-
-  @media screen and (min-width: 1300px) {
-    //Make header sticky for large screens
-    position: sticky;
-    width: 100%;
-  }
-}
-
-.main {
+.site-main {
   margin: 0 auto;
-  padding: 1.5vw 15px 0;
+  padding: 1.5vw 10rem 0;
+  opacity: 0;
+  animation: fadeIn .8s ease-in-out forwards;
+  animation-delay: .4s;
 }
-
-.footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: calc(var(--space) / 2);
-  text-align: center;
-  font-size: 0.8em;
-  padding: 2rem 2rem 14rem;
-  background: var(--body-color);
-  color: var(--bg-color);
-
-  a {
-    color: inherit;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-
-  h2 {
-    margin-top: 0;
-    text-align: left;
+  to {
+    opacity: 1;
   }
 }
 </style>
