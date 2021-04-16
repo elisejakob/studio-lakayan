@@ -5,7 +5,7 @@
         :alt="$static.about.image.alt"
         v-if="$static.about.image"
         class="about-card__image"
-        :src="$urlForImage($static.about.image, $static.metadata.sanityOptions).height(800).width(800).auto('format').url()"
+        :src="$urlForImage($static.about.image, $static.metadata.sanityOptions).height(800).width(500).auto('format').url()"
       />
     </div>
     <div class="about-card__header">
