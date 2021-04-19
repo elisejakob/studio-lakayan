@@ -109,13 +109,17 @@ export default {
     }
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
   .intro {
     margin-top: 4rem;
     padding: 0 2rem;
   }
-  .lead p {
-    font-size: 2.4rem;
+  .lead {
+    max-width: none;
+    width: 100%;
+    p {
+      font-size: 2.4rem;
+    }
   }
 }
 @media (max-width: 500px) {

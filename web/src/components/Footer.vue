@@ -128,7 +128,7 @@ export default {
   }
 @media (max-width: 1000px) {
   .site-footer {
-    padding: 1.5vw 1.4rem 0;
+    padding: 0 1.4rem;
   }
   .footer-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -146,6 +146,9 @@ export default {
   }
 }
 @media (max-width: 600px) {
+  .site-footer {
+    padding: 0;
+  }
   .footer-grid {
     display: block;
   }
