@@ -34,7 +34,13 @@ export default {
               {
                 title: 'URL',
                 name: 'href',
-                type: 'url'
+                type: 'url',
+                validation: Rule => Rule.uri({scheme: ['tel', 'mailto', 'http', 'https']})
+              },
+              {
+                title: 'Open in new tab',
+                name: 'blank',
+                type: 'boolean'
               }
             ]
           }

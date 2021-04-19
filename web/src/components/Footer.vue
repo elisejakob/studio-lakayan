@@ -4,7 +4,7 @@
       <div class="block contact">
         <h2>Contact</h2>
         <ul>
-          <li><a class="link" href="mailto:studio@lakayan.no" target="_blank"><div class="before"><Arrow /></div>studio@lakayan.no</a></li>
+          <li><a class="link" href="mailto:studio@lakayan.no?subject=✉️" target="_blank"><div class="before"><Arrow /></div>studio@lakayan.no</a></li>
           <li><a class="link" href="tel:004745919489" target="_blank"><div class="before"><Arrow /></div>+47 459 19 489</a></li>
         </ul>
       </div>
@@ -123,6 +123,9 @@ export default {
   }
 @media (max-width: 1000px) {
   .site-footer {
+    padding: 1.5vw 1.4rem 0;
+  }
+  .footer-grid {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
     .block {

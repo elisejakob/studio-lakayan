@@ -11,9 +11,9 @@ module.exports = {
   siteDescription:
     'Interior architecture studio based in Oslo.',
 
-  templates: {
+  /*templates: {
     SanityProject: '/:slug__current'
-  },
+  },*/
 
   plugins: [
     {

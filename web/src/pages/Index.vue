@@ -18,7 +18,6 @@
         <img src="/images/night.jpg" />
       </div>
     </div>
-    <ColorPalette />
     <InfoCard />
     <AboutCard />
     <div class="gallery">
@@ -98,15 +97,13 @@ import Intro from '~/components/Intro'
 import ProjectCard from '~/components/ProjectCard'
 import InfoCard from '~/components/InfoCard'
 import AboutCard from '~/components/AboutCard'
-import ColorPalette from '~/components/graphics/ColorPalette'
 
 export default {
   components: {
     Intro,
     ProjectCard,
     InfoCard,
-    AboutCard,
-    ColorPalette
+    AboutCard
   },
   metaInfo: {
     title: 'Studio Lakayan'
