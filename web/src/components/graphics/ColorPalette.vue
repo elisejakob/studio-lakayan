@@ -1,16 +1,20 @@
 <template>
   <div class="color-palette">
     <div class="color color1">
-      <Logo />
+      Light<br>
+      #FDF4E4
     </div>
     <div class="color color2">
-      <Logo />
+      Dorna<br>
+      #F80934
     </div>
     <div class="color color3">
-      <Logo />
+      Night<br>
+      #111014
     </div>
     <div class="color color4">
-      <Logo />
+      Earth<br>
+      #352A2A
     </div>
   </div>
 </template>
@@ -32,7 +36,8 @@ export default {
     padding: 4rem 2rem 2rem 2rem;
   }
   .color1 {
-    background: var(--color-olive);
+    background: var(--color-light);
+    color: var(--color-earth);
   }
   .color2 {
     background: var(--color-dorna);

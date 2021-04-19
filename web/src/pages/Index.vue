@@ -1,7 +1,6 @@
 <template>
   <Layout :show-logo="false">
     <Intro />
-    <!--<ColorPalette />-->
     <!--<div class="projects">
       <project-card
         v-for="edge in $page.projects.edges"
@@ -19,6 +18,7 @@
         <img src="/images/night.jpg" />
       </div>
     </div>
+    <ColorPalette />
     <InfoCard />
     <AboutCard />
     <div class="gallery">
@@ -171,7 +171,6 @@ export default {
   display: block;
   position: relative;
   width: 100%;
-  max-width: 600px;
   margin: 4rem 0 0;
   transform: translateX(14%);
   z-index: 10;
@@ -203,7 +202,6 @@ export default {
   display: block;
   position: relative;
   width: 80%;
-  max-width: 600px;
   margin: 4rem 0 0;
   > img {
     display: block;
@@ -233,6 +231,8 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 body[data-theme="dark"] {
  	.intro-image.dark,

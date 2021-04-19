@@ -15,6 +15,17 @@ export default {
       description: 'The introduction to Studio Lakayan. The first things visitors see when they visit the front page.'
     },
     {
+      name: 'body',
+      type: 'bodyPortableText',
+      title: 'Body'
+    },
+    {
+      name: 'footertext',
+      type: 'simplePortableText',
+      title: 'Footer',
+      description: 'Text at the bottom of the page.'
+    },
+    {
       name: 'description',
       type: 'text',
       title: 'Description',

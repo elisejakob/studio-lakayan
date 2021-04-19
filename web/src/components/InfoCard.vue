@@ -57,7 +57,8 @@ export default {
 .info-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 0 -1rem;
+  margin: 0 auto;
+  max-width: 1400px;
   padding: 7rem 0;
   align-items: stretch;
   position: relative;
@@ -116,7 +117,7 @@ export default {
 .sketch-image-wrapper {
   display: block;
   position: relative;
-  width: 14rem;
+  width: 11rem;
   margin: 4rem 0 2rem;
   > img {
     display: block;

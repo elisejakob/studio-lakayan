@@ -68,7 +68,8 @@ export default {
 .about-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 0 -1rem;
+  margin: 0 auto;
+  max-width: 1400px;
   align-items: stretch;
   position: relative;
   min-height: 50vh;
@@ -117,9 +118,13 @@ export default {
     grid-template-columns: 1fr;
     &__image {
       margin-bottom: 2rem;
+      img {
+        width: 50%;
+      }
     }
     &__header {
       display: block;
+      padding-right: 0;
       h2, p {
         margin-bottom: 4rem;
       }
