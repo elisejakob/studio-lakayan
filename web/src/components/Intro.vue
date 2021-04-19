@@ -105,15 +105,23 @@ export default {
     &.visible {
       max-height: 100rem;
       transition: max-height 0.8s ease-in-out;
+      margin-bottom: 4rem;
     }
   }
 }
 @media (max-width: 1000px) {
   .intro {
     margin-top: 4rem;
+    padding: 0 2rem;
   }
   .lead p {
     font-size: 2.4rem;
   }
+}
+@media (max-width: 500px) {
+  .button {
+		width: 100%;
+		max-width: none;
+	}
 }
 </style>

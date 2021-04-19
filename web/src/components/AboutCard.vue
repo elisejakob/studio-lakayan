@@ -166,7 +166,7 @@ export default {
     }
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 680px) {
   .about-card {
     &__image {
       order: 2;
@@ -179,16 +179,18 @@ export default {
     }
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 680px) {
   .about-card {
     grid-template-columns: 1fr;
     &__image {
+      order: 2;
       margin-bottom: 2rem;
       img {
         width: 50%;
       }
     }
     &__header {
+      order: 1;
       display: block;
       padding-right: 0;
       h2, p {
@@ -196,6 +198,7 @@ export default {
       }
     }
     &__content {
+      order: 3;
       grid-column: span 1;
       padding-top: 0;
 
@@ -204,5 +207,22 @@ export default {
       }
     }
   }
+}
+@media (max-width: 500px) {
+  .about-card {
+    &__image {
+      order: 2;
+    }
+    &__header {
+      order: 1;
+    }
+    &__content {
+      order: 3;
+    }
+  }
+  .button {
+		width: 100%;
+		max-width: none;
+	}
 }
 </style>

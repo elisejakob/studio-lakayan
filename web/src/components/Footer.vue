@@ -146,7 +146,7 @@ export default {
   }
 }
 @media (max-width: 600px) {
-  .site-footer {
+  .footer-grid {
     display: block;
   }
 }

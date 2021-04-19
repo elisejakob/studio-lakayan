@@ -117,7 +117,7 @@ export default {
 .sketch-image-wrapper {
   display: block;
   position: relative;
-  width: 11rem;
+  width: 9rem;
   margin: 4rem 0 2rem;
   > img {
     display: block;
@@ -159,6 +159,15 @@ body[data-theme="dark"] {
 @media (max-width: 700px) {
   .info-card {
     display: block;
+    padding-bottom: 140px;
+    h2, h3 {
+      margin-top: 0;
+    }
+  }
+  .sketch-image-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
   }
 }
 </style>

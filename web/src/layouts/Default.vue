@@ -48,7 +48,7 @@ export default {
 }
 @media (max-width: 1000px) {
   .site-main {
-    padding: 1.5vw 1.4rem 0;
+    padding: 1.5vw 0 0;
   }
 }
 </style>
