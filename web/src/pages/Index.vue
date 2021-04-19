@@ -20,26 +20,7 @@
     </div>
     <InfoCard />
     <AboutCard />
-    <div class="gallery">
-      <div class="image-wrapper sketch-image-wrapper">
-        <img class="sketch for-size" src="/images/sketch-black.png" />
-        <div class="sketch light">
-          <img src="/images/sketch-black.png" />
-        </div>
-        <div class="sketch dark">
-          <img src="/images/sketch-white.png" />
-        </div>
-      </div>
-      <div class="image-wrapper nature-image-wrapper">
-        <img class="nature for-size" src="/images/plant-day.jpg" />
-        <div class="nature light">
-          <img src="/images/plant-day.jpg" />
-        </div>
-        <div class="nature dark">
-          <img src="/images/plant-night.jpg" />
-        </div>
-      </div>
-    </div>
+    <Gallery />
   </Layout>
 </template>
 
@@ -97,16 +78,19 @@ import Intro from '~/components/Intro'
 import ProjectCard from '~/components/ProjectCard'
 import InfoCard from '~/components/InfoCard'
 import AboutCard from '~/components/AboutCard'
+import Gallery from '~/components/Gallery'
 
 export default {
   components: {
     Intro,
     ProjectCard,
     InfoCard,
-    AboutCard
+    AboutCard,
+    Gallery
   },
   metaInfo: {
-    title: 'Studio Lakayan'
+    title: "",
+    titleTemplate: "Studio Lakayan"
   }
 }
 </script>
@@ -133,7 +117,7 @@ export default {
   right: 0;
   left: 0;
   bottom: 0;
-  transition: all .8s ease-in-out;
+  transition: opacity .8s ease-in-out;
 
   img {
     display: block;
@@ -142,107 +126,20 @@ export default {
     position: relative;
   }
 
-  &:after {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(var(--bg-color), transparent, transparent, transparent);
-  }
-
   &.dark {
     opacity: 0;
     margin-top: 0;
-    &:after {
-      background: linear-gradient(var(--color-night), transparent, transparent, transparent);
-    }
   }
   &.light {
     opacity: 1;
   }
-}
-.sketch-image-wrapper {
-  display: block;
-  position: relative;
-  width: 100%;
-  margin: 4rem 0 0;
-  transform: translateX(14%);
-  z-index: 10;
-  > img {
-    display: block;
-    width: 100%;
-    max-width: none;
-    position: relative;
-    opacity: 0;
-  }
-}
-.sketch {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  transition: all .8s ease-in-out;
-
-  &.dark {
-    opacity: 0;
-  }
-  &.light {
-    opacity: .8;
-  }
-}
-.nature-image-wrapper {
-  display: block;
-  position: relative;
-  width: 80%;
-  margin: 4rem 0 0;
-  > img {
-    display: block;
-    width: 100%;
-    max-width: none;
-    position: relative;
-    opacity: 0;
-  }
-}
-.nature {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  transition: all .8s ease-in-out;
-
-  &.dark {
-    opacity: 0;
-  }
-  &.light {
-    opacity: 1;
-  }
-}
-.gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  max-width: 1400px;
-  margin: 0 auto;
 }
 body[data-theme="dark"] {
  	.intro-image.dark,
-  .nature.dark,
   .villa.dark {
     opacity: 1;
   }
-  .sketch.dark {
-    opacity: .8;
-  }
   .intro-image.light,
-  .sketch.light,
-  .nature.light,
   .villa.light {
     opacity: 0;
   }

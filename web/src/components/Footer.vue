@@ -95,6 +95,11 @@ export default {
     a {
       display: inline;
       text-decoration: underline;
+      color: inherit;
+      transition: all .2s ease-in-out;
+      &:hover {
+        color: var(--link-color);
+      }
     }
   }
 

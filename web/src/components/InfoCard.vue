@@ -59,7 +59,7 @@ export default {
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
   max-width: 1400px;
-  padding: 7rem 0;
+  padding: 4rem 0 7rem;
   align-items: stretch;
   position: relative;
   min-height: 50vh;

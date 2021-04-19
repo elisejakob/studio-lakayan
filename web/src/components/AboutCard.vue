@@ -15,7 +15,13 @@
       </p>
     </div>
     <div class="about-card__content">
-      <block-content :blocks="$static.about._rawBio" />
+      <div class="readmore-about">
+        <button class="button" @click="visible = !visible">
+          <template v-if="visible">Read less</template>
+          <template v-else>Read more</template>
+        </button>
+        <div class="content" :class="{ visible: visible }"><block-content :blocks="$static.about._rawBio" /></div>
+      </div>
     </div>
   </div>
 </template>
@@ -60,6 +66,11 @@ import BlockContent from '~/components/BlockContent'
 export default {
   components: {
     BlockContent
+  },
+  data() {
+    return {
+      visible: false
+    }
   }
 }
 </script>
@@ -98,6 +109,61 @@ export default {
   }
   img {
     display: block;
+  }
+}
+.button {
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 200;
+  border: none;
+  padding: .6rem 2rem;
+  margin: .2rem auto;
+  width: 80%;
+  max-width: 400px;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background: var(--link-color);
+  }
+}
+.readmore-about {
+  font-size: 1.4rem;
+  font-weight: 200;
+  display: block;
+  margin: 1rem auto 4rem;
+  position: relative;
+
+  .button {
+    position: absolute;
+    bottom: -5rem;
+    left: 0;
+    right: 0;
+    background: none;
+    color: var(--body-color);
+    border: 1px solid var(--body-color);
+    &:hover {
+      border-color: var(--link-color);
+      color: var(--link-color);
+    }
+  }
+
+  .content {
+    padding-bottom: 1rem;
+    overflow: hidden;
+    max-height: 8rem;
+    transition: none;
+    
+    p {
+      max-width: 28em;
+      margin: 0 auto 1rem;
+    }
+    &.visible {
+      max-height: 100rem;
+      transition: max-height 0.8s ease-in-out;
+    }
   }
 }
 @media (min-width: 1000px) {
