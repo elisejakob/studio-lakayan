@@ -10,12 +10,18 @@
       />
     </div>-->
     <div class="intro-image-wrapper">
-      <img class="for-size" src="/images/day.jpg" />
+      <g-image class="for-size" src="/images/day.jpg" />
       <div class="intro-image light">
-        <img src="/images/day.jpg" />
+        <g-image
+          alt="A modern house by the beach with large windows through which you see designer furniture"
+          src="/images/day.jpg"
+        />
       </div>
       <div class="intro-image dark">
-        <img src="/images/night.jpg" />
+        <g-image
+          alt="A modern house by the beach with large windows through which you see designer furniture"
+          src="/images/night.jpg"
+        />
       </div>
     </div>
     <InfoCard />
