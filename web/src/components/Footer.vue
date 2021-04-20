@@ -111,7 +111,7 @@ export default {
 
   ul {
     list-style: none;
-    margin: 1rem 0 7rem;
+    margin: 1rem 0 4rem;
     padding: 0;
     li {
       margin: 0 0 .7rem;

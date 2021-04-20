@@ -1,7 +1,7 @@
 <template>
   <section class="intro">
     <div class="lead"><block-content :blocks="$static.general._rawIntro" /></div>
-    <a href="#contact" class="button">Get in touch</a>
+    <button class="button" @click="scrollToContact()">Get in touch</button>
     <div class="readmore">
       <button class="button" @click="visible = !visible">
         <template v-if="visible">Read less</template>
@@ -32,6 +32,11 @@ export default {
     return {
       visible: false
     }
+  },
+  methods: {
+    scrollToContact() {
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth'});
+    }
   }
 }
 </script>
@@ -40,7 +45,7 @@ export default {
 .intro {
   margin: 1rem 0 4rem;
   position: relative;
-  z-index: 10;
+  z-index: 100;
 }
 .lead {
   font-family: var(--font-serif);

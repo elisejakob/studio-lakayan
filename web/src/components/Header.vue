@@ -1,12 +1,12 @@
 <template>
   <header class="site-header">
-    <div class="header__left">
+    <div class="site-header__left">
       <g-link class="logo" to="/">
         <Logo />
       </g-link>
     </div>
 
-    <div class="header__right">
+    <div class="site-header__right">
       <!--<nav class="site-nav">
         <a href="#">About</a>
         <a href="#">Contact</a>
@@ -32,18 +32,21 @@ export default {
 .site-header {
   display: flex;
   justify-content: space-between;
-  align-items: top;
-  padding: 1.4rem 2rem;
   top: 0;
+  height: 0;
   z-index: 10;
+  overflow: visible;
   transform: translateY(-100%);
   opacity: 0;
   animation: fadeDown .8s ease-in-out forwards;
+  margin-bottom: 9rem;
 
   &__left,
   &__right {
+    padding: 1.4rem 2rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    position: relative;
   }
 
   @media screen and (min-width: 1000px) {
