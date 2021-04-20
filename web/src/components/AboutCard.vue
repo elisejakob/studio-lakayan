@@ -10,8 +10,8 @@
     </div>
     <div class="about-card__header">
       <h2 class="about-card__title">About Dorna</h2>
-      <p class="lead"><!--{{ $static.about.lead }}-->
-        Dorna Lakayan is an interior architect and designer with a refined and holistic approach to architecture, interiors and product design that combines her Persian heritage, with modern and minimal Scandinavian design language.
+      <p class="lead">
+        {{ $static.about.lead }}
       </p>
     </div>
     <div class="about-card__content">
@@ -35,6 +35,7 @@ query {
     }
   }
   about: sanityAbout (id: "about") {
+    lead
     _rawBio
     image {
       asset {
