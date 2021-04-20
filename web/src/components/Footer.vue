@@ -13,7 +13,7 @@
         <ul>
           <li><a class="link" href="https://instagram.com/studiolakayan" target="_blank"><div class="before"><Arrow /></div>Instagram</a></li>
           <li><a class="link" href="https://facebook.com/studiolakayan" target="_blank"><div class="before"><Arrow /></div>Facebook</a></li>
-          <li><a class="link" href="https://linkedin.com/studiolakayan" target="_blank"><div class="before"><Arrow /></div>LinkedIn</a></li>
+          <li><a class="link" href="https://linkedin.com/company/studiolakayan" target="_blank"><div class="before"><Arrow /></div>LinkedIn</a></li>
         </ul>
       </div>
       <div class="block text">
