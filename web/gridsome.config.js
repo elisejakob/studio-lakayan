@@ -9,7 +9,7 @@ const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
   siteName: 'Studio Lakayan',
   siteDescription:
-    'Interior architecture studio based in Oslo.',
+    'Studio Lakayan is an interior architecture and design practice based in Oslo committed to merging imagination and discipline.',
 
   /*templates: {
     SanityProject: '/:slug__current'
