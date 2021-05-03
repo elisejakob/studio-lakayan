@@ -34,7 +34,7 @@
         <li>
           <h3 class="service-heading">Architecture</h3>
           <ul class="service-list">
-            <ServiceItem text="Design of small scale buildings" />
+            <ServiceItem text="Design of Small Scale Buildings" />
             <ServiceItem text="Planning" />
           </ul>
         </li>
